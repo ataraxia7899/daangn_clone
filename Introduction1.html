@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>회사.회사 소개</title>
+		<style>
+			body {
+				width: 100%;
+				margin: 0;
+				padding-top: 110px; /* nav 높이만큼 여백 (nav 높이에 맞게 조정) */
+			}
+			.bodyMainContainer {
+				width: 65%;
+				margin: 0 auto;
+			}
+			.daangnav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 1000;
+				background: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 110px; /* nav 높이 지정 (이미지+버튼 높이에 맞게 조정) */
+				padding: 0 50px;
+			}
+			.navimg {
+				width: 200px;
+			}
+			.nav {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
+				margin-right: 30px;
+			}
+			.nav input {
+				margin: auto 15px;
+				border: none;
+				font-weight: 600;
+				background-color: transparent;
+				font-size: 17px;
+			}
+			.nav input:hover {
+				color: #a1a1a1;
+			}
+			header {
+				margin-top: 50px;
+				margin-left: 50px;
+				font-size: 28px;
+			}
+			.imgHeader {
+				margin-top: 40px;
+				width: 90%;
+				border-radius: 30px;
+				margin-bottom: 15px;
+			}
+			.Pclass {
+				width: 705px;
+				height: 156px;
+				font-size: 25px;
+				font-weight: 750;
+				word-break: break-all;
+			}
+			.mainContainer {
+				margin-top: 100px;
+				width: 100%;
+				align-items: center;
+				justify-items: center;
+			}
+			.info {
+				align-items: center;
+				justify-items: center;
+				width: 713px;
+				height: 196px;
+			}
+			.sectionborderC {
+				display: flex; /* flex 컨테이너 설정 */
+				flex-direction: column; /* 세로 정렬 */
+				/* padding: 30px; 내부 여백 추가 */
+				border: none;
+				box-shadow: 2px 2px 2px lightgray;
+				border-radius: 50px;
+				width: 100%;
+				height: 500px;
+				gap: 20px; /* 요소 간 간격 */
+				overflow: hidden; /* 이미지가 둥근 모서리를 넘지 않게 */
+			}
+			.borderImg {
+				width: 100%;
+				height: 300px; /* 고정 높이 지정 */
+				object-fit: cover; /*이미지 비율 유지 */
+				/*border-radius: 30px; */ /* 이미지에도 둥근 모서리 */
+			}
+			.borderH1 {
+				width: 250px;
+				font-size: 25px;
+				font-weight: 750;
+				word-break: keep-all;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+			.borderP {
+				color: gray;
+				font-size: 18px;
+				word-break: keep-all;
+				margin: 0;
+			}
+			.SectionitemContainer {
+				display: flex;
+				width: 90%;
+				gap: 50px;
+				justify-content: center;
+			}
+			input[type='radio'] {
+				accent-color: black;
+				width: 16px;
+				height: 16px;
+				margin: 0 10px;
+				cursor: pointer;
+			}
+			.info2 {
+				width: 50%;
+			}
+			.info2Img {
+				width: 556px;
+				height: 417px;
+			}
+			.buttonClickclass:hover {
+				color: #a1a1a1;
+			}
+			/* .buttonClickclass > img {
+				width: 24px;
+				height: 24px;
+			} */
+			.scrollContainer {
+				display: flex;
+				width: max-content;
+				animation: scroll 40s linear infinite;
+				gap: 50px;
+				/* overflow: hidden; */
+			}
+			@keyframes scroll {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-50%);
+				}
+			}
+			.scrollItem {
+				background-position: center;
+				width: 245px;
+				height: 322px;
+				border-radius: 30px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				align-items: center;
+				justify-items: center;
+				display: flex;
+				flex-direction: column-reverse;
+				transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1),
+					box-shadow 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+			}
+			.scrollP {
+				font-size: 20px;
+				font-weight: 950;
+				word-break: keep-all;
+				color: white;
+				width: 80%;
+			}
+			.scrollContainer > .scrollItem {
+				margin: 0px -1px 0px 0px;
+			}
+			.scrollItem:hover {
+				transform: translateY(-14px);
+				/* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18),
+					0 1.5px 5px rgba(0, 0, 0, 0.1); */
+				z-index: 1;
+			}
+			@keyframes bannermove {
+				0% {
+					transform: translate(0, 0);
+				}
+				100% {
+					transform: translate(-50%, 0);
+				}
+			}
+			.PPContainer {
+				margin-top: 100px;
+				width: 100%;
+				height: 300px;
+				align-items: center;
+				justify-items: center;
+				background-color: #f2ecd8;
+			}
+			.PPclass {
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				/* align-content: center; */
+				flex-direction: column;
+				gap: 20px;
+			}
+			.footerNav {
+				width: 100%;
+			}
+			.footerAddress {
+				width: 100%;
+			}
+			address {
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bodyMainContainer">
+			<nav class="daangnav">
+				<div style="display: flex; width: 70%">
+					<div class="navimg">
+						<img src="./asset/about.daangn.com_.png" style="display: inline" />
+					</div>
+					<div class="nav">
+						<input value="회사소개" type="button" />
+						<input value="팀문화" type="button" />
+						<input value="서비스" type="button" />
+						<input value="블로그" type="button" />
+						<input value="채용공고" type="button" />
+					</div>
+				</div>
+			</nav>
+			<header>
+				<h1>
+					이웃과 더 가까워지는 <br />
+					따뜻한 동네를 만들어요
+				</h1>
+				<img
+					class="imgHeader"
+					src="https://about.daangn.com/static/effc58503119b61b80a68008f7f2c5f9/96bce/535e4041-7678-4723-9de3-b435bda64ad1_main_key_visual.avif"
+				/>
+				<p class="Pclass">
+					우리 동네 이웃 5명 중 3명은 당근으로 이웃과 함께하고 있습니다. 중고
+					직거래로 시작한 당근은 이웃과 이웃, 흩어져 있던 정보를 연결하며 세상에
+					없던 지역 기반 커뮤니티 서비스를 만들어 나가고 있어요.
+				</p>
+			</header>
+			<main>
+				<section class="mainContainer">
+					<div class="info">
+						<p style="font-weight: 600; font-size: 20px">당근이 일하는 방식</p>
+						<p style="font-weight: 800; font-size: 40px">
+							사용자 가치를 가장 중요하게 생각해요
+						</p>
+						<p style="color: gray; text-align: center; font-size: 20px">
+							좋은 서비스에 대한 답은 항상 사용자에게 있어요. 오래 고민하는
+							<br />
+							대신 빠르게 실험하며 사용자를 위한 서비스를 만들어요.
+						</p>
+					</div>
+				</section>
+				<section
+					class="mainContainer"
+					style="
+						display: flex;
+						gap: 40px;
+						justify-content: center;
+						margin-left: 45px;
+					"
+				>
+					<div class="SectionitemContainer">
+						<div class="sectionborderC">
+							<img
+								class="borderImg"
+								src="https://about.daangn.com/static/cacd9f0642c255d67f622e67b3346bc0/ad7b9/ffd08d03-9f52-4b22-857f-8905ab90183a_vthumb_1.avif"
+							/>
+							<div style="padding: 30px">
+								<p class="borderH1">전단지를 대체할 당근 광고의 등장</p>
+								<p class="borderP">당근 광고실을 소개합니다!</p>
+							</div>
+						</div>
+						<div class="sectionborderC">
+							<img
+								class="borderImg"
+								src="https://about.daangn.com/static/9f2d7c3446a63259c4aca04218079ae8/a9bae/3b8d5b45-c81f-4007-b3ed-7c410ba7b91d_img_1160_650.avif"
+							/>
+							<div style="padding: 30px">
+								<p class="borderH1">혹시...? 네, ‘당근’입니다! 🥕</p>
+								<p class="borderP">
+									당근마켓에서 당근으로, 리브랜딩에 대한 모든 것
+								</p>
+							</div>
+						</div>
+					</div>
+					<button
+						style="
+							background-color: transparent;
+							color: black;
+							width: 50px;
+							height: 50px;
+							border: none;
+							border-radius: 50%;
+							box-sizing: border-box;
+							font-size: 40px;
+						"
+					>
+						>
+					</button>
+				</section>
+				<div class="mainContainer" style="margin-top: 70px">
+					<div style="align-items: center; justify-items: center">
+						<label
+							><input type="radio" name="SectionPage" value="1" checked
+						/></label>
+						<label><input type="radio" name="SectionPage" value="2" /></label>
+						<label><input type="radio" name="SectionPage" value="3" /></label>
+					</div>
+				</div>
+				<section class="mainContainer">
+					<div style="display: flex; margin-left: 50px; gap: 100px">
+						<div class="info2">
+							<p
+								style="font-size: 20px; font-weight: 600; margin-bottom: -25px"
+							>
+								당근이 일하는 문화
+							</p>
+							<p
+								style="
+									font-size: 40px;
+									font-weight: 600;
+									word-break: keep-all;
+									margin-left: 1px;
+								"
+							>
+								함께의 가치를 만드는 사람들은 어떤 문화에서 일할까요?
+							</p>
+							<input
+								type="button"
+								class="buttonClickclass"
+								value="자세히 보기 ➡"
+								style="
+									margin-top: -25px;
+									border: none;
+									background-color: transparent;
+									font-size: 20px;
+									font-weight: 500;
+									margin-left: 1px;
+								"
+							/>
+						</div>
+						<div class="info2Img">
+							<img
+								src="https://about.daangn.com/static/f908ab4f62ab752775740da5815f4596/66698/0608bdb2-2324-44ba-825f-48dd0165a92c_main_culture.avif"
+							/>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<section style="margin-top: 100px">
+			<img
+				style="
+					width: 100%;
+					height: 500px;
+					object-fit: cover;
+					object-position: center center;
+					opacity: 1;
+				"
+				src="https://about.daangn.com/static/be24e5e7dac188e61489da8a6954f3d4/1318a/1b533e66-c0e0-476e-be11-490b52325cfe_main_wide.avif"
+			/>
+		</section>
+		<section class="mainContainer">
+			<div class="info">
+				<p style="font-weight: 800; font-size: 40px">
+					당근 팀 이야기가 더 궁금하다면
+				</p>
+				<input
+					type="button"
+					class="buttonClickclass"
+					value="블로그글 보러가기 ➡"
+					style="
+						margin-top: -25px;
+						border: none;
+						background-color: transparent;
+						font-size: 20px;
+						font-weight: 600;
+						margin-left: 1px;
+					"
+				/>
+			</div>
+		</section>
+		<div style="width: 100%; overflow: hidden">
+			<section class="scrollContainer" style="display: flex; margin-top: 50px">
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/14910283b84542b1242c63f384cf4133/dd5d2/Z8f_3RsAHJWomIE3_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">동네를 발견하는 새로운 경험, 동네지도</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b22edcf482a7634091110c3fc2956fd5/c6613/Z5IATpbqstJ99xXX_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">어느 신입 프로덕트 디자이너의 좌충우돌 성장기</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/4a4b53c89a790faec81ec3550410cf02/dd5d2/Z4nTDJbqstJ99jL2_thumb22.jpg');
+					"
+				>
+					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ②</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/5ecb4d518bbe4970f129c5d80b97d83d/96665/Z4nTDpbqstJ99jL4_thumb12.png');
+					"
+				>
+					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ①</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b809d808a2bb01f91d10800fc892f597/c6613/Z4DetpbqstJ99TKD_feed-h.jpg');
+					"
+				>
+					<p class="scrollP">당근의 성공을 견인하는 첫 화면의 비밀</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b40f01d74faaa940fd8d53eb21137c7e/c6613/Z3tpoJbqstJ99D6U_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">
+						누구나 안심하고 사용하도록, 당근의 안전을 지키는 보안팀
+					</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/113805d5c4f6ce404d9f406f912cd1ea/028fd/Z2o-EZbqstJ98zdI_THUMB.jpg');
+					"
+				>
+					<p class="scrollP">당근에서 당근해요! 사내 교환&나눔 행사 🥕</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/0ebd33aaa5c972c649a711d02909c3b6/7e9f5/Z1paTpbqstJ98Xpo_adserver.png');
+					"
+				>
+					<p class="scrollP">사용자를 위한 최적의 광고를 찾아서, AdServer</p>
+				</div>
+			</section>
+		</div>
+
+		<section class="PPContainer">
+			<div
+				style="
+					width: 80%;
+					height: 100%;
+					align-items: center;
+					justify-items: center;
+				"
+			>
+				<div class="PPclass">
+					<p style="font-weight: 800; font-size: 40px; margin: 0">
+						당근과 함께 성장해 보세요
+					</p>
+					<div class="buttonClickclass">
+						<input
+							type="button"
+							value="채용공고 보러 가기 ➡"
+							style="
+								margin-top: -150px;
+								border: none;
+								background-color: transparent;
+								font-size: 20px;
+								font-weight: 600;
+								margin-left: 1px;
+							"
+						/>
+						<!-- <img src="./asset/free-icon-right-arrow-5166431.png" /> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer
+			style="
+				display: flex;
+				width: 100%;
+				height: 300px;
+				justify-items: center;
+				align-items: center;
+			"
+		>
+			<div style="width: 100%; height: 30%; padding: 160px 160px">
+				<nav class="footerNav">
+					<div class="nav" style="justify-content: flex-start; width: 100%">
+						<input
+							style="font-size: 13px"
+							value="개인정보처리방침"
+							type="button"
+						/>
+						<input
+							style="font-size: 13px; font-weight: normal"
+							value="브랜드 리소스"
+							type="button"
+						/>
+						<input
+							style="font-size: 13px; font-weight: normal"
+							value="자주 묻는 질문"
+							type="button"
+						/>
+						<input
+							style="font-size: 13px; font-weight: normal"
+							value="IR"
+							type="button"
+						/>
+						<input
+							style="font-size: 13px; font-weight: normal"
+							value="PR"
+							type="button"
+						/>
+					</div>
+					<div class="nav" style="justify-content: flex-end; width: 100%">
+						<img src="" />
+						<img src="" />
+						<img src="" />
+					</div>
+				</nav>
+				<address
+					class="footerAddress"
+					style="margin-top: 30px; margin-left: 20px"
+				>
+					<div style="display: flex; gap: 20px">
+						<p style="padding: 0; color: gray">
+							주소 : 서울특별시 서초구 강남대로 465, 교보강남타워 11층
+						</p>
+						<p style="color: gray">
+							(채용 관련 문의 :&nbsp;<a
+								href="mailto:recruit@daangn.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								>recruit@daangn.com</a
+							>)
+						</p>
+					</div>
+					<strong>© 당근마켓</strong>
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>
+<script>
+	const scrollContainer = document.querySelector('.scrollContainer');
+	scrollContainer.innerHTML += scrollContainer.innerHTML; // 아이템을 한 번 더 복제
+</script>
