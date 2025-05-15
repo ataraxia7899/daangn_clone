@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>회사.회사 소개</title>
+		<link rel="icon" href="/asset/faviconV2.png" />
+		<title>당근.회사 소개</title>
 		<style>
 			body {
 				width: 100%;
@@ -236,14 +237,28 @@
 			<nav class="daangnav">
 				<div style="display: flex; width: 70%">
 					<div class="navimg">
-						<img src="./asset/about.daangn.com_.png" style="display: inline" />
+						<img
+							id="headerlogo"
+							src="./asset/about.daangn.com_.png"
+							style="display: inline"
+						/>
 					</div>
 					<div class="nav">
-						<input value="회사소개" type="button" />
-						<input value="팀문화" type="button" />
-						<input value="서비스" type="button" />
-						<input value="블로그" type="button" />
-						<input value="채용공고" type="button" />
+						<a href="https://about.daangn.com/company/" target="_self"
+							><input value="회사소개" type="button"
+						/></a>
+						<a href="https://about.daangn.com/culture/" target="_blank"
+							><input value="팀문화" type="button"
+						/></a>
+						<a href="https://about.daangn.com/service/" target="_blank"
+							><input value="서비스" type="button"
+						/></a>
+						<a href="https://about.daangn.com/blog/" target="_blank"
+							><input value="블로그" type="button"
+						/></a>
+						<a href="https://about.daangn.com/jobs/" target="_blank"
+							><input value="채용공고" type="button"
+						/></a>
 					</div>
 				</div>
 			</nav>
@@ -425,6 +440,7 @@
 							</p>
 							<input
 								type="button"
+								id="valuebutton"
 								class="buttonClickclass"
 								value="자세히 보기 ➡"
 								style="
@@ -465,6 +481,7 @@
 				</p>
 				<input
 					type="button"
+					id="storyinfo"
 					class="buttonClickclass"
 					value="블로그글 보러가기 ➡"
 					style="
@@ -631,6 +648,7 @@
 					<div class="buttonClickclass">
 						<input
 							type="button"
+							id="recruitmentButton"
 							class="buttonClickclass"
 							value="채용공고 보러 가기 ➡"
 							style="
@@ -671,35 +689,51 @@
 					<nav class="footerNav">
 						<div class="nav" style="justify-content: flex-start; width: 100%">
 							<input
+								id="footernav1"
 								style="font-size: 12px"
 								value="개인정보처리방침"
 								type="button"
 							/>
 							<input
+								id="footernav2"
 								style="font-size: 12px; font-weight: normal"
 								value="브랜드 리소스"
 								type="button"
 							/>
 							<input
+								id="footernav3"
 								style="font-size: 12px; font-weight: normal"
 								value="자주 묻는 질문"
 								type="button"
 							/>
 							<input
+								id="footernav4"
 								style="font-size: 12px; font-weight: normal"
 								value="IR"
 								type="button"
 							/>
 							<input
+								id="footernav5"
 								style="font-size: 12px; font-weight: normal"
 								value="PR"
 								type="button"
 							/>
 							<div class="nav" style="justify-content: flex-end; width: 100%">
-								<img src="./asset/free-icon-github-733609.png" />
-								<img src="./asset/medium-icon-svgrepo-com.png" />
-								<img src="./asset/free-icon-facebook-circular-logo-20673.png" />
-								<img src="./asset/free-icon-instagram-747393.png" />
+								<a href="https://github.com/daangn" target="_blank"
+									><img src="./asset/free-icon-github-733609.png"
+								/></a>
+								<a href="https://medium.com/daangn" target="_blank"
+									><img src="./asset/medium-icon-svgrepo-com.png"
+								/></a>
+								<a href="https://www.facebook.com/daangn/" target="_blank"
+									><img
+										src="./asset/free-icon-facebook-circular-logo-20673.png"
+								/></a>
+								<a
+									href="https://www.instagram.com/daangnmarket/"
+									target="_blank"
+									><img src="./asset/free-icon-instagram-747393.png"
+								/></a>
 							</div>
 						</div>
 					</nav>
@@ -729,6 +763,66 @@
 			</div>
 		</footer>
 	</body>
+	<script>
+		// header의 로고 눌렀을때 홈화면으로
+		const headerlogo = document.querySelector('#headerlogo');
+
+		headerlogo.addEventListener('click', () => {
+			window.open('./ex_08.html', '_self');
+		});
+
+		// 함께의 가치를 만드는 사람들은 어떤 문화에서 일할까요? 버튼 눌렀을때 이벤트 생성
+		const valuebutton = document.querySelector('#valuebutton');
+
+		valuebutton.addEventListener('click', () => {
+			window.open('https://about.daangn.com/culture/', '_self');
+		});
+		// 당근팀 이야기가 더 궁금하다면 버튼 눌렀을때 이벤트 생성
+		const storyinfo = document.querySelector('#storyinfo');
+
+		storyinfo.addEventListener('click', () => {
+			window.open('https://about.daangn.com/blog/', '_self');
+		});
+
+		// 채용공고 바로가기 버튼 눌렀을때 이벤트 생성
+		const recruitmentButton = document.querySelector('#recruitmentButton');
+
+		recruitmentButton.addEventListener('click', () => {
+			window.open('https://about.daangn.com/jobs/', '_self');
+		});
+
+		// footer의 nav 클릭 이벤트 생성
+		const footernav1 = document.querySelector('#footernav1');
+		const footernav2 = document.querySelector('#footernav2');
+		const footernav3 = document.querySelector('#footernav3');
+		const footernav4 = document.querySelector('#footernav4');
+		const footernav5 = document.querySelector('#footernav5');
+
+		footernav1.addEventListener('click', () => {
+			window.open(
+				'https://daangn.notion.site/2b7689002cd847d78155695b5b194838',
+				'_self'
+			);
+		});
+		footernav2.addEventListener('click', () => {
+			window.open(
+				'https://daangn.notion.site/6fdd92981e4a42d8b29c89cbbba7a8b7',
+				'_self'
+			);
+		});
+		footernav3.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/faq/%EC%A7%80%EC%9B%90-%EA%B4%80%EB%A0%A8/',
+				'_self'
+			);
+		});
+		footernav4.addEventListener('click', () => {
+			window.open('https://about.daangn.com/ir/', '_self');
+		});
+		footernav5.addEventListener('click', () => {
+			window.open('https://about.daangn.com/company/pr/', '_self');
+		});
+	</script>
 </html>
 <script>
 	// 슬라이더 자바스크립트
