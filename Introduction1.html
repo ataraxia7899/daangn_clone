@@ -76,14 +76,27 @@
 				width: 713px;
 				height: 196px;
 			}
+			.SectionitemContainer {
+				display: flex;
+				width: 1250px;
+				position: relastive;
+				overflow: hidden;
+			}
+			.SectionitemSlider {
+				display: flex;
+				/* width: 1250px; */
+				height: 481px;
+				transition: transform 0.5s;
+				gap: 50px;
+			}
 			.sectionborderC {
 				display: flex; /* flex 컨테이너 설정 */
 				flex-direction: column; /* 세로 정렬 */
-				/* padding: 30px; 내부 여백 추가 */
 				border: none;
 				box-shadow: 2px 2px 2px lightgray;
 				border-radius: 50px;
-				width: 100%;
+				width: 440px;
+				min-width: 0;
 				height: 480px;
 				gap: 20px; /* 요소 간 간격 */
 				overflow: hidden; /* 이미지가 둥근 모서리를 넘지 않게 */
@@ -107,12 +120,6 @@
 				font-size: 18px;
 				word-break: keep-all;
 				margin: 0;
-			}
-			.SectionitemContainer {
-				display: flex;
-				width: 90%;
-				gap: 50px;
-				justify-content: center;
 			}
 			input[type='radio'] {
 				accent-color: black;
@@ -138,7 +145,7 @@
 			.scrollContainer {
 				display: flex;
 				width: max-content;
-				animation: scroll 40s linear infinite;
+				animation: scroll 27s linear infinite;
 				gap: 50px;
 				/* overflow: hidden; */
 			}
@@ -289,30 +296,86 @@
 							box-sizing: border-box;
 							font-size: 40px;
 						"
+						id="prev"
 					>
-						<
+						&lt
 					</button>
 					<div class="SectionitemContainer">
-						<div class="sectionborderC">
-							<img
-								class="borderImg"
-								src="https://about.daangn.com/static/cacd9f0642c255d67f622e67b3346bc0/ad7b9/ffd08d03-9f52-4b22-857f-8905ab90183a_vthumb_1.avif"
-							/>
-							<div style="padding: 30px">
-								<p class="borderH1">전단지를 대체할 당근 광고의 등장</p>
-								<p class="borderP">당근 광고실을 소개합니다!</p>
+						<div class="SectionitemSlider">
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/cacd9f0642c255d67f622e67b3346bc0/ad7b9/ffd08d03-9f52-4b22-857f-8905ab90183a_vthumb_1.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">전단지를 대체할 당근 광고의 등장</p>
+									<p class="borderP">당근 광고실을 소개합니다!</p>
+								</div>
 							</div>
-						</div>
-						<div class="sectionborderC">
-							<img
-								class="borderImg"
-								src="https://about.daangn.com/static/9f2d7c3446a63259c4aca04218079ae8/a9bae/3b8d5b45-c81f-4007-b3ed-7c410ba7b91d_img_1160_650.avif"
-							/>
-							<div style="padding: 30px">
-								<p class="borderH1">혹시...? 네, ‘당근’입니다! 🥕</p>
-								<p class="borderP">
-									당근마켓에서 당근으로, 리브랜딩에 대한 모든 것
-								</p>
+
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/9f2d7c3446a63259c4aca04218079ae8/a9bae/3b8d5b45-c81f-4007-b3ed-7c410ba7b91d_img_1160_650.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">혹시...? 네, ‘당근’입니다! 🥕</p>
+									<p class="borderP">
+										당근마켓에서 당근으로, 리브랜딩에 대한 모든 것
+									</p>
+								</div>
+							</div>
+
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/4658dd390922648fe1e65c773a1084cc/2a619/0405df96-6410-4c95-873e-7e47f10d08e7_thumb_job-OKR.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">당근알바 성장 비결을 공개합니다</p>
+									<p class="borderP">OKR, 어렵게 느껴진 적 있다면</p>
+								</div>
+							</div>
+
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/9c7b26f61fb557917c9efd840eb172b9/1040b/03f654dc-e7d0-4f84-bdfa-8aea66c5aade_thumb-daagni.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">당근이의 시루떡 배달기</p>
+									<p class="borderP">똑똑, 계세요? 떡 가져왔어요!</p>
+								</div>
+							</div>
+
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/dea26adbd4b989b1b76ac2d69a0728b9/f5570/a1421505-fb62-428f-9b84-3fc5f30d8fb2_blogthumb_1주1개실험하는프로덕트팀이되는여정.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">
+										1주 1개 실험하는 프로덕트 팀이 되는 여정
+									</p>
+									<p class="borderP">
+										당근마켓의 실험 문화를 이끄는 데이터가치화팀
+									</p>
+								</div>
+							</div>
+
+							<div class="sectionborderC">
+								<img
+									class="borderImg"
+									src="https://about.daangn.com/static/bac57433d37fefe8094b77acf7a2370b/f6455/0b9c548a-be61-4e0c-aedd-879059b79f80_thumb_fleamarket-coworking.avif"
+								/>
+								<div style="padding: 30px">
+									<p class="borderH1">
+										당근 개발자, 디자이너, PM 이렇게 협업합니다
+									</p>
+									<p class="borderP">
+										‘그렇게 오래 걸려요?’라는 질문에 답하는 법
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -326,9 +389,11 @@
 							border-radius: 50%;
 							box-sizing: border-box;
 							font-size: 40px;
+							margin-right: 100px;
 						"
+						id="next"
 					>
-						>
+						&gt
 					</button>
 				</section>
 				<div class="mainContainer" style="margin-top: 70px">
@@ -415,6 +480,72 @@
 		</section>
 		<div style="width: 100%; overflow: hidden">
 			<section class="scrollContainer" style="display: flex; margin-top: 50px">
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/14910283b84542b1242c63f384cf4133/dd5d2/Z8f_3RsAHJWomIE3_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">동네를 발견하는 새로운 경험, 동네지도</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b22edcf482a7634091110c3fc2956fd5/c6613/Z5IATpbqstJ99xXX_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">어느 신입 프로덕트 디자이너의 좌충우돌 성장기</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/4a4b53c89a790faec81ec3550410cf02/dd5d2/Z4nTDJbqstJ99jL2_thumb22.jpg');
+					"
+				>
+					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ②</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/5ecb4d518bbe4970f129c5d80b97d83d/96665/Z4nTDpbqstJ99jL4_thumb12.png');
+					"
+				>
+					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ①</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b809d808a2bb01f91d10800fc892f597/c6613/Z4DetpbqstJ99TKD_feed-h.jpg');
+					"
+				>
+					<p class="scrollP">당근의 성공을 견인하는 첫 화면의 비밀</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/b40f01d74faaa940fd8d53eb21137c7e/c6613/Z3tpoJbqstJ99D6U_thumb2.jpg');
+					"
+				>
+					<p class="scrollP">
+						누구나 안심하고 사용하도록, 당근의 안전을 지키는 보안팀
+					</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/113805d5c4f6ce404d9f406f912cd1ea/028fd/Z2o-EZbqstJ98zdI_THUMB.jpg');
+					"
+				>
+					<p class="scrollP">당근에서 당근해요! 사내 교환&나눔 행사 🥕</p>
+				</div>
+				<div
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/0ebd33aaa5c972c649a711d02909c3b6/7e9f5/Z1paTpbqstJ98Xpo_adserver.png');
+					"
+				>
+					<p class="scrollP">사용자를 위한 최적의 광고를 찾아서, AdServer</p>
+				</div>
 				<div
 					class="scrollItem"
 					style="
@@ -600,6 +731,72 @@
 	</body>
 </html>
 <script>
-	const scrollContainer = document.querySelector('.scrollContainer');
-	scrollContainer.innerHTML += scrollContainer.innerHTML; // 아이템을 한 번 더 복제
+	// 슬라이더 자바스크립트
+	var current = 0;
+	// 기존 코드
+	const itemsPerPage = 2; // -> 1로 변경 (1개씩 슬라이드)
+	const items = document.querySelectorAll('.sectionborderC');
+	const slider = document.querySelector('.SectionitemSlider');
+	const itemWidth = items[0].offsetWidth;
+	const radios = document.querySelectorAll('input[name="SectionPage"]'); // 라디오 버튼 선택
+
+	function showSlide(n) {
+		const translateValue = -n * (itemWidth + 50) * itemsPerPage;
+		slider.style.transform = `translateX(${translateValue}px)`;
+
+		// 라디오 버튼 체크 업데이트
+		const radio = document.querySelector(
+			`input[name="SectionPage"][value="${n + 1}"]`
+		);
+		if (radio) radio.checked = true;
+
+		// 동작하지 못하는 #next, #pre 버튼은 사라지도록
+		const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+		document.querySelector('#prev').style.visibility =
+			n === 0 ? 'hidden' : 'visible';
+		document.querySelector('#next').style.visibility =
+			n >= maxPage ? 'hidden' : 'visible';
+	}
+
+	// #pre버튼은 초기 상태에서 안보이도록 정의
+	showSlide(0);
+
+	document.querySelector('#prev').onclick = () => {
+		current = Math.max(0, current - 1);
+		showSlide(current);
+	};
+
+	document.querySelector('#next').onclick = () => {
+		const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+		current = Math.min(maxPage, current + 1);
+		showSlide(current);
+	};
+
+	// #next, #pre 버튼들 클릭 이벤트 지정
+	radios.forEach((radio) => {
+		radio.addEventListener('change', (e) => {
+			current = parseInt(e.target.value) - 1;
+			showSlide(current);
+		});
+	});
+
+	// 버튼 이벤트 리스너
+	document.querySelector('#prev').onclick = () => {
+		current = Math.max(0, current - 1);
+		showSlide(current);
+	};
+
+	document.querySelector('#next').onclick = () => {
+		const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+		current = Math.min(maxPage, current + 1);
+		showSlide(current);
+	};
+
+	// #next, #pre 버튼들 각 페이지에서 동작하지 못하는 경우 안보이도록
+	const maxPage = Math.ceil(items.length / itemsPerPage) - 1;
+
+	document.querySelector('#prev').style.display = n === 0 ? 'none' : 'block';
+
+	document.querySelector('#next').style.display =
+		n >= maxPage ? 'none' : 'block';
 </script>
