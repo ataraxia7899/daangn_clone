@@ -98,15 +98,16 @@
 				border-radius: 50px;
 				width: 440px;
 				min-width: 0;
-				height: 480px;
+				height: 430px;
 				gap: 20px; /* 요소 간 간격 */
 				overflow: hidden; /* 이미지가 둥근 모서리를 넘지 않게 */
 			}
 			.borderImg {
 				width: 100%;
-				height: 300px; /* 고정 높이 지정 */
+				height: 250px; /* 고정 높이 지정 */
 				object-fit: cover; /*이미지 비율 유지 */
 				/*border-radius: 30px; */ /* 이미지에도 둥근 모서리 */
+				margin-bottom: -20px;
 			}
 			.borderH1 {
 				width: 250px;
@@ -317,7 +318,7 @@
 					</button>
 					<div class="SectionitemContainer">
 						<div class="SectionitemSlider">
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem1">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/cacd9f0642c255d67f622e67b3346bc0/ad7b9/ffd08d03-9f52-4b22-857f-8905ab90183a_vthumb_1.avif"
@@ -328,7 +329,7 @@
 								</div>
 							</div>
 
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem2">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/9f2d7c3446a63259c4aca04218079ae8/a9bae/3b8d5b45-c81f-4007-b3ed-7c410ba7b91d_img_1160_650.avif"
@@ -341,7 +342,7 @@
 								</div>
 							</div>
 
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem3">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/4658dd390922648fe1e65c773a1084cc/2a619/0405df96-6410-4c95-873e-7e47f10d08e7_thumb_job-OKR.avif"
@@ -352,7 +353,7 @@
 								</div>
 							</div>
 
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem4">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/9c7b26f61fb557917c9efd840eb172b9/1040b/03f654dc-e7d0-4f84-bdfa-8aea66c5aade_thumb-daagni.avif"
@@ -363,13 +364,14 @@
 								</div>
 							</div>
 
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem5">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/dea26adbd4b989b1b76ac2d69a0728b9/f5570/a1421505-fb62-428f-9b84-3fc5f30d8fb2_blogthumb_1주1개실험하는프로덕트팀이되는여정.avif"
+									style="object-fit: fill"
 								/>
 								<div style="padding: 30px">
-									<p class="borderH1">
+									<p class="borderH1" style="width: 300px">
 										1주 1개 실험하는 프로덕트 팀이 되는 여정
 									</p>
 									<p class="borderP">
@@ -378,7 +380,7 @@
 								</div>
 							</div>
 
-							<div class="sectionborderC">
+							<div class="sectionborderC" id="sectionborderitem6">
 								<img
 									class="borderImg"
 									src="https://about.daangn.com/static/bac57433d37fefe8094b77acf7a2370b/f6455/0b9c548a-be61-4e0c-aedd-879059b79f80_thumb_fleamarket-coworking.avif"
@@ -498,6 +500,16 @@
 		<div style="width: 100%; overflow: hidden">
 			<section class="scrollContainer" style="display: flex; margin-top: 50px">
 				<div
+					id="scrollItem0"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/8cc17f6a410425dd72998204c35c74cc/5e19c/aCVdTCdWJ-7kSIe0_thumb2.avif');
+					"
+				>
+					<p class="scrollP">AI가 만든 파도 위에서 당근이 서핑하는 법</p>
+				</div>
+				<div
+					id="scrollItem1"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/14910283b84542b1242c63f384cf4133/dd5d2/Z8f_3RsAHJWomIE3_thumb2.jpg');
@@ -506,6 +518,7 @@
 					<p class="scrollP">동네를 발견하는 새로운 경험, 동네지도</p>
 				</div>
 				<div
+					id="scrollItem2"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b22edcf482a7634091110c3fc2956fd5/c6613/Z5IATpbqstJ99xXX_thumb2.jpg');
@@ -514,6 +527,7 @@
 					<p class="scrollP">어느 신입 프로덕트 디자이너의 좌충우돌 성장기</p>
 				</div>
 				<div
+					id="scrollItem3"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/4a4b53c89a790faec81ec3550410cf02/dd5d2/Z4nTDJbqstJ99jL2_thumb22.jpg');
@@ -522,6 +536,7 @@
 					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ②</p>
 				</div>
 				<div
+					id="scrollItem4"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/5ecb4d518bbe4970f129c5d80b97d83d/96665/Z4nTDpbqstJ99jL4_thumb12.png');
@@ -530,6 +545,7 @@
 					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ①</p>
 				</div>
 				<div
+					id="scrollItem5"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b809d808a2bb01f91d10800fc892f597/c6613/Z4DetpbqstJ99TKD_feed-h.jpg');
@@ -538,6 +554,7 @@
 					<p class="scrollP">당근의 성공을 견인하는 첫 화면의 비밀</p>
 				</div>
 				<div
+					id="scrollItem6"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b40f01d74faaa940fd8d53eb21137c7e/c6613/Z3tpoJbqstJ99D6U_thumb2.jpg');
@@ -548,6 +565,7 @@
 					</p>
 				</div>
 				<div
+					id="scrollItem7"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/113805d5c4f6ce404d9f406f912cd1ea/028fd/Z2o-EZbqstJ98zdI_THUMB.jpg');
@@ -556,6 +574,7 @@
 					<p class="scrollP">당근에서 당근해요! 사내 교환&나눔 행사 🥕</p>
 				</div>
 				<div
+					id="scrollItem8"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/0ebd33aaa5c972c649a711d02909c3b6/7e9f5/Z1paTpbqstJ98Xpo_adserver.png');
@@ -564,6 +583,47 @@
 					<p class="scrollP">사용자를 위한 최적의 광고를 찾아서, AdServer</p>
 				</div>
 				<div
+					id="scrollItem9"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/f002cb1587b6e99ed7f81bdcd7e2c2c6/72995/ZuFMIBoQrfVKl8uM_thumb2.avif');
+					"
+				>
+					<p class="scrollP">
+						당근 Gen AI 해커톤, 치열한 몰입으로 혁신을 만들어라!
+					</p>
+				</div>
+				<div
+					id="scrollItem10"
+					class="scrollItem"
+					style="
+						background-image: url('	https://about.daangn.com/static/217489d9d14cfb0832…f13fa9a3e2/72995/ZtF2o0aF0TcGJj7o_Thumbnail2.avif');
+					"
+				>
+					<p class="scrollP">슬기로운 당근 생활을 위한 인턴의 문화 노트</p>
+				</div>
+				<div
+					id="scrollItem11"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/4e012539af29c43846189da609fbf187/c926f/Zs2KikaF0TcGJamF_thumb2.avif');
+					"
+				>
+					<p class="scrollP">
+						우리 동네 소통의 장, 동네생활이 이웃들을 연결하는 이유
+					</p>
+				</div>
+				<div
+					id="scrollItem0"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/8cc17f6a410425dd72998204c35c74cc/5e19c/aCVdTCdWJ-7kSIe0_thumb2.avif');
+					"
+				>
+					<p class="scrollP">AI가 만든 파도 위에서 당근이 서핑하는 법</p>
+				</div>
+				<div
+					id="scrollItem1"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/14910283b84542b1242c63f384cf4133/dd5d2/Z8f_3RsAHJWomIE3_thumb2.jpg');
@@ -572,6 +632,7 @@
 					<p class="scrollP">동네를 발견하는 새로운 경험, 동네지도</p>
 				</div>
 				<div
+					id="scrollItem2"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b22edcf482a7634091110c3fc2956fd5/c6613/Z5IATpbqstJ99xXX_thumb2.jpg');
@@ -580,6 +641,7 @@
 					<p class="scrollP">어느 신입 프로덕트 디자이너의 좌충우돌 성장기</p>
 				</div>
 				<div
+					id="scrollItem3"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/4a4b53c89a790faec81ec3550410cf02/dd5d2/Z4nTDJbqstJ99jL2_thumb22.jpg');
@@ -588,6 +650,7 @@
 					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ②</p>
 				</div>
 				<div
+					id="scrollItem4"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/5ecb4d518bbe4970f129c5d80b97d83d/96665/Z4nTDpbqstJ99jL4_thumb12.png');
@@ -596,6 +659,7 @@
 					<p class="scrollP">프로덕트에 진심인 엔지니어는 어떻게 일할까? ①</p>
 				</div>
 				<div
+					id="scrollItem5"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b809d808a2bb01f91d10800fc892f597/c6613/Z4DetpbqstJ99TKD_feed-h.jpg');
@@ -604,6 +668,7 @@
 					<p class="scrollP">당근의 성공을 견인하는 첫 화면의 비밀</p>
 				</div>
 				<div
+					id="scrollItem6"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/b40f01d74faaa940fd8d53eb21137c7e/c6613/Z3tpoJbqstJ99D6U_thumb2.jpg');
@@ -614,6 +679,7 @@
 					</p>
 				</div>
 				<div
+					id="scrollItem7"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/113805d5c4f6ce404d9f406f912cd1ea/028fd/Z2o-EZbqstJ98zdI_THUMB.jpg');
@@ -622,12 +688,44 @@
 					<p class="scrollP">당근에서 당근해요! 사내 교환&나눔 행사 🥕</p>
 				</div>
 				<div
+					id="scrollItem8"
 					class="scrollItem"
 					style="
 						background-image: url('https://about.daangn.com/static/0ebd33aaa5c972c649a711d02909c3b6/7e9f5/Z1paTpbqstJ98Xpo_adserver.png');
 					"
 				>
 					<p class="scrollP">사용자를 위한 최적의 광고를 찾아서, AdServer</p>
+				</div>
+				<div
+					id="scrollItem9"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/f002cb1587b6e99ed7f81bdcd7e2c2c6/72995/ZuFMIBoQrfVKl8uM_thumb2.avif');
+					"
+				>
+					<p class="scrollP">
+						당근 Gen AI 해커톤, 치열한 몰입으로 혁신을 만들어라!
+					</p>
+				</div>
+				<div
+					id="scrollItem10"
+					class="scrollItem"
+					style="
+						background-image: url('	https://about.daangn.com/static/217489d9d14cfb0832…f13fa9a3e2/72995/ZtF2o0aF0TcGJj7o_Thumbnail2.avif');
+					"
+				>
+					<p class="scrollP">슬기로운 당근 생활을 위한 인턴의 문화 노트</p>
+				</div>
+				<div
+					id="scrollItem11"
+					class="scrollItem"
+					style="
+						background-image: url('https://about.daangn.com/static/4e012539af29c43846189da609fbf187/c926f/Zs2KikaF0TcGJamF_thumb2.avif');
+					"
+				>
+					<p class="scrollP">
+						우리 동네 소통의 장, 동네생활이 이웃들을 연결하는 이유
+					</p>
 				</div>
 			</section>
 		</div>
@@ -789,6 +887,138 @@
 
 		recruitmentButton.addEventListener('click', () => {
 			window.open('https://about.daangn.com/jobs/', '_self');
+		});
+
+		// sectionborderC div(영역)에 클릭 이벤트 생성
+		const sectionborderitem1 = document.querySelector('#sectionborderitem1');
+		const sectionborderitem2 = document.querySelector('#sectionborderitem2');
+		const sectionborderitem3 = document.querySelector('#sectionborderitem3');
+		const sectionborderitem4 = document.querySelector('#sectionborderitem4');
+		const sectionborderitem5 = document.querySelector('#sectionborderitem5');
+		const sectionborderitem6 = document.querySelector('#sectionborderitem6');
+
+		sectionborderitem1.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EA%B4%91%EA%B3%A0%EC%8B%A4-%EB%8F%99%EB%84%A4-%EC%82%AC%EC%9E%A5%EB%8B%98-%EA%B4%91%EA%B3%A0/',
+				'_self'
+			);
+		});
+		sectionborderitem2.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EB%A6%AC%EB%B8%8C%EB%9E%9C%EB%94%A9-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%AA%85-%EB%A1%9C%EA%B3%A0-%EB%A6%AC%EB%89%B4%EC%96%BC/',
+				'_self'
+			);
+		});
+		sectionborderitem3.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC%EC%95%8C%EB%B0%94-%EC%84%B1%EC%9E%A5-%EB%B9%84%EA%B2%B0-okr-pmf/',
+				'_self'
+			);
+		});
+		sectionborderitem4.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93-%EC%BA%90%EB%A6%AD%ED%84%B0-%EB%8B%B9%EA%B7%BC%EC%9D%B4-%EC%8B%9C%EB%A3%A8%EB%96%A1-%EC%9D%B4%EB%B2%A4%ED%8A%B8/',
+				'_self'
+			);
+		});
+		sectionborderitem5.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93-%EC%8B%A4%ED%97%98%EB%AC%B8%ED%99%94-%EB%8D%B0%EC%9D%B4%ED%84%B0%EA%B0%80%EC%B9%98%ED%99%94%ED%8C%80/',
+				'_self'
+			);
+		});
+		sectionborderitem6.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93-it-%EA%B0%9C%EB%B0%9C-%ED%98%91%EC%97%85-pm-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%94%94%EC%9E%90%EC%9D%B4%EB%84%88/',
+				'_self'
+			);
+		});
+
+		// 무한 스크롤바의 아이템 div(영역)들 클릭 이벤트 생성
+		const scrollItem0 = document.querySelector('#scrollItem0');
+		const scrollItem1 = document.querySelector('#scrollItem1');
+		const scrollItem2 = document.querySelector('#scrollItem2');
+		const scrollItem3 = document.querySelector('#scrollItem3');
+		const scrollItem4 = document.querySelector('#scrollItem4');
+		const scrollItem5 = document.querySelector('#scrollItem5');
+		const scrollItem6 = document.querySelector('#scrollItem6');
+		const scrollItem7 = document.querySelector('#scrollItem7');
+		const scrollItem8 = document.querySelector('#scrollItem8');
+		const scrollItem9 = document.querySelector('#scrollItem9');
+		const srcollItem10 = document.querySelector('#scrollItem10');
+		const scrollItem11 = document.querySelector('#scrollItem11');
+
+		scrollItem0.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-ai-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8-%EC%A1%B0%EC%A7%81%EB%AC%B8%ED%99%94-%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B2%BD%ED%97%98/',
+				'_self'
+			);
+		});
+		scrollItem1.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EB%A1%9C%EC%BB%AC%EB%A7%B5%EC%8A%A4-%EB%8F%99%EB%84%A4%EC%A7%80%EB%8F%84-%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B2%BD%ED%97%98-%EC%B1%84%EC%9A%A9-%ED%8C%80%EB%AC%B8%ED%99%94/',
+				'_self'
+			);
+		});
+		scrollItem2.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B4%EB%84%88-%EC%9D%B8%ED%84%B4-%EC%BB%A4%EB%A6%AC%EC%96%B4/',
+				'_self'
+			);
+		});
+		scrollItem3.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%ED%8C%80%EB%B9%8C%EB%94%A9-%ED%9A%8C%EA%B3%A0/',
+				'_self'
+			);
+		});
+		scrollItem4.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%AA%A9%EC%A0%81%EC%A1%B0%EC%A7%81-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4/',
+				'_self'
+			);
+		});
+		scrollItem5.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%ED%94%BC%EB%93%9C%EC%8B%A4-%EC%B1%84%EC%9A%A9-%ED%99%88%ED%99%94%EB%A9%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90-pm/',
+				'_self'
+			);
+		});
+		scrollItem6.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EB%B3%B4%EC%95%88%ED%8C%80-%ED%98%91%EC%97%85-%EC%B1%84%EC%9A%A9-%ED%8C%80%EB%AC%B8%ED%99%94/',
+				'_self'
+			);
+		});
+		scrollItem7.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EC%B9%9C%ED%99%98%EA%B2%BD-%EC%82%AC%EB%82%B4%EB%AC%B8%ED%99%94-%EC%86%8C%EB%AA%A8%EC%9E%84-%EC%A4%91%EA%B3%A0%EA%B1%B0%EB%9E%98/',
+				'_self'
+			);
+		});
+		scrollItem8.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EA%B4%91%EA%B3%A0%EC%8B%A4-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%84%9C%EB%B2%84-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-dsp/',
+				'_self'
+			);
+		});
+		scrollItem9.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%ED%95%B4%EC%BB%A4%ED%86%A4-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%AA%B0%EC%9E%85-%ED%98%91%EC%97%85/',
+				'_self'
+			);
+		});
+		scrollItem10.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EC%A1%B0%EC%A7%81%EB%AC%B8%ED%99%94-%ED%94%BC%ED%94%8C%ED%8C%80-%EC%9E%90%EC%9C%A8-%ED%95%99%EC%8A%B5%EB%AC%B8%ED%99%94-%EC%9D%B8%ED%84%B4%EC%8B%AD/',
+				'_self'
+			);
+		});
+		scrollItem11.addEventListener('click', () => {
+			window.open(
+				'https://about.daangn.com/blog/archive/%EB%8B%B9%EA%B7%BC-%EB%8F%99%EB%84%A4%EC%83%9D%ED%99%9C-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%82%AC%EC%9A%A9%EC%9E%90%EA%B2%BD%ED%97%98-%EC%B1%84%EC%9A%A9-%ED%8C%80%EB%AC%B8%ED%99%94/',
+				'_self'
+			);
 		});
 
 		// footer의 nav 클릭 이벤트 생성
